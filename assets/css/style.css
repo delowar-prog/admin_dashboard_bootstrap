@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap");
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  min-width: 0;
+}
+
+#left-sidebar {
+  background-color: #036780;
+  padding: 5px;
+  width: 90px;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  min-height: 100vh;
+}
+#left-sidebar.expand {
+  width: 250px;
+}
+#toggle-button {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+#toggle-button i {
+  font-size: 24px;
+  margin: 0 18px;
+}
+#left-sidebar a {
+  color: #fff;
+}
+#left-sidebar:not(.expand) .brand,
+#left-sidebar:not(.expand) .sidebar-footer span,
+#left-sidebar:not(.expand) a.navbar-link span {
+  display: none;
+}
+
+#left-sidebar.expand .brand,
+#left-sidebar.expand .sidebar-footer span,
+#left-sidebar.expand a.navbar-link span {
+  animation: fadeIn 0.9s ease;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.side-navbar {
+  flex: 1 1 auto;
+  padding: 18px 0;
+}
+
+.navbar-link {
+  padding: 5px 20px;
+  display: block;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+  font-size: 20px;
+}
+.side-navbar li span {
+  font-size: 14px;
+  transition: all 0.25s ease-in-out;
+}
+.dropdown-link {
+  display: block;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+  font-size: 20px;
+}
+.sidebar-link i,
+.dropdown-item i {
+  font-size: 12px;
+}
+.sidebar-footer {
+  padding: 5px 20px;
+  display: block;
+  white-space: nowrap;
+}
+.main-section {
+  width: 100%;
+}
+.navbar {
+  background-color: #0787a7;
+  margin: 0;
+  padding: 0 15px;
+  box-shadow: 0px 3px 5px 1px #036780;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 20px;
+}
+.dropdown-toggle::after {
+    margin-left: 0;
+    vertical-align: 0;
+    border-top: .3em solid #fff;
+}
+.dropdown-item:hover {
+    background-color: #0787a7;
+}
+.user-logo {
+  width: 40px;
+  height: 40px;
+}
+.dropdown-menu{
+    background-color: #39a1bbf1;
+}
+
+/* Main content section style */
+.page-title{
+  margin: 10px;
+}
+hr {
+  margin: 0 0 1rem 0;
+  color: #ddd;
+  border: 0;
+  border-top: var(--bs-border-width) solid;
+  opacity: 0.50;
+}
+.balance-summary{
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #E0FFFF;
+}
+.balance-title{
+  background-color: #20B2AA;
+}
+.card-bg-sale{
+  background-color: aquamarine;
+}
+.card-bg-purchase{
+  background-color: #ADD8E6;
+}
+.card-bg-expense{
+  background-color: #F5DEB3;
+}
+.card-bg-sale tr,.card-bg-purchase tr,.card-bg-expense tr{
+  border-top: 1px solid #ddd;
+  font-size: 11px;
+}
+.card-bg-sale td,.card-bg-purchase td,.card-bg-expense td{
+  padding: 5px;
+}
